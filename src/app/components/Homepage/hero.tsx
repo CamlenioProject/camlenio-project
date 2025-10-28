@@ -57,7 +57,7 @@ const Hero = () => {
           className="flex flex-col items-center justify-center w-full md:w-3/5"
         >
           <div className="max-w-2xl space-y-4 px-4 sm:px-4">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight ">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
               Camlenio is a Leading Software
               <br />
               Development in{" "}

@@ -27,7 +27,7 @@ export default function ContactUs() {
     console.log(data);
 
     const payload = {
-      type: "contact", // 👈 required for your merged route
+      type: "contact", 
       name,
       email,
       phone,

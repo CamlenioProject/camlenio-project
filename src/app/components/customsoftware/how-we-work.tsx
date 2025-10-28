@@ -51,14 +51,17 @@ export default function HowWeWork() {
           <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
           How we work Woth Camlenio
         </span>
-        <h2
-          className="text-3xl sm:text-4xl font-bold mb-4 text-orange-500"
-          style={{
-            textShadow:
-              "-1px -1px 0px #da5f00, 3px 3px 0px #fff, 4px 6px 0px #ff582336",
-          }}
-        >
-          How we work
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          How we{" "}
+          <span
+            className="text-orange-500"
+            style={{
+              textShadow:
+                "-1px -1px 0px #da5f00, 3px 3px 0px #fff, 4px 6px 0px #ff582336",
+            }}
+          >
+            work
+          </span>
         </h2>
         <motion.p
           initial={{ y: 50, opacity: 0 }}

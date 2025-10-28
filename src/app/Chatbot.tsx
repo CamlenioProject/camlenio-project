@@ -75,7 +75,6 @@ export default function AnimatedChatBot() {
       }
     }
 
-    // --- Normal step: AI or form flow ---
     if (step === "normal") {
       if (
         trimmed.toLowerCase().includes("service") ||
@@ -219,78 +218,28 @@ export default function AnimatedChatBot() {
 
       try {
         await fetch("/api/enquiry", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            type: "chatbot",
-            name: userName,
-            email: userEmail,
-            phone: userPhone,
-            project: userProject,
-            message: trimmed,
-          }),
-        });
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt }),
+    });
 
-        setMessages((prev) => [
-          ...prev,
-          {
-            from: "company",
-            text: `✅ Thanks ${userName}! We’ve received your message and our team will contact you soon.`,
-          },
-        ]);
-      } catch (err) {
-        setMessages((prev) => [
-          ...prev,
-          {
-            from: "bot",
-            text: "❌ Something went wrong while sending your info. Please try again later.",
-          },
-        ]);
-      }
-      return;
-    }
+    if (!response.ok) throw new Error("Network response was not ok");
+
+    const data = await response.json();
+    const botMessage = { text: data.text, sender: "bot" };
+    setMessages((prev) => [...prev, botMessage]);
+  } catch (error) {
+    console.error("Error fetching chatbot response:", error);
+    setMessages((prev) => [
+      ...prev,
+      { text: "Sorry, something went wrong. Please try again later.", sender: "bot" },
+    ]);
+  } finally {
+    setLoading(false);
+  }
+};
+
   };
-
-  // --- Auto scroll ---
-  useEffect(() => {
-    if (!open) return; // ✅ condition inside effect
-    const el = scrollRef.current;
-    if (el) {
-      const timer = setTimeout(() => {
-        el.scrollTop = el.scrollHeight;
-      }, 50);
-      return () => clearTimeout(timer);
-    }
-  }, [messages, open]);
-
-  // --- Close on escape / outside click ---
-  useEffect(() => {
-    if (!open) return; // ✅ condition inside effect
-
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
-    };
-
-    const handleClickOutside = (e: MouseEvent) => {
-      const target = e.target as Node;
-      if (
-        chatContainerRef.current &&
-        !chatContainerRef.current.contains(target)
-      ) {
-        setOpen(false);
-      }
-    };
-
-    document.addEventListener("keydown", handleKey);
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("keydown", handleKey);
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [open]);
-
-  if (dismissed) return null;
 
   return (
     <div

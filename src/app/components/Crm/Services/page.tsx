@@ -141,18 +141,6 @@ const Services = () => {
             );
           })}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
-          <button className="bg-orange-500 px-6 py-3 text-lg font-medium rounded-lg text-gray-100 hover:bg-orange-600 shadow-[0_0_40px_hsl(25_100%_50%_/_0.3)]">
-            Discuss Your Project
-          </button>
-        </motion.div>
       </div>
     </section>
   );

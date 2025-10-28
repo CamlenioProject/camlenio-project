@@ -308,7 +308,7 @@ const DevServices = () => {
         alt="Global Shape"
         width={600}
         height={600}
-        className=" w-auto h-auto absolute -left-[22%] -top-[4%] -rotate-40 opacity-30  [animation-duration:50s] text-gray-900 z-10"
+        className=" w-auto h-auto absolute left-[0%] -top-[4%] -rotate-40 opacity-30  [animation-duration:50s] text-gray-900 z-10"
         unoptimized
       />
     </div>

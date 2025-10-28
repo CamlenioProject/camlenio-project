@@ -1,24 +1,24 @@
 import Image from "next/image";
+import { MdHorizontalRule } from "react-icons/md";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove pt-20 overflow-hidden">
-     
+    <section className="relative bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove pt-20 overflow-hidden">
       <div className="pl-8 md:pl-16 lg:pl-24 flex flex-col-reverse lg:flex-row items-center pt-8">
         {/* Left Content */}
         <div className="lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
-          <p className="text-sm font-sans text-gray-500 mb-2">
-            Growth Your Business
+          <p className="text-sm font-sans text-gray-500 mb-2 flex items-center">
+            Growth Your Business <MdHorizontalRule className="ml-2" />
           </p>
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-2">
             Best customized software development
           </h1>
-          <p className="max-w-3xl mx-auto text-gray-600 text-sm md:text-base mb-4 font-sans">
+          <p className="max-w-3xl text-gray-600 text-sm md:text-base mb-6 font-sans">
             Get professional & reliable research-oriented solutions for Data
             Science and Machine Learning business needs. Enjoy stress-free
             decision-making!
           </p>
-          <button className="max-w-xs px-6 py-3 bg-orange-500 text-white font-bold rounded-xl shadow-lg">
+          <button className="max-w-[10rem] px-3 py-3 bg-orange-500 text-white font-bold rounded-xl shadow-lg">
             Get Started
           </button>
         </div>

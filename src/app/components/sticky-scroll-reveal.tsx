@@ -78,7 +78,7 @@ export const StickyScrollGSAP = ({
       <div
         ref={rightCardRef}
         className={cn(
-          "sticky top-[20%] hidden lg:block h-[280px] w-auto overflow-hidden rounded-3xl shadow-lg",
+          "sticky top-[20%] hidden lg:block h-[480px] w-[680px] overflow-hidden rounded-3xl shadow-lg",
           contentClassName
         )}
       >
@@ -88,7 +88,7 @@ export const StickyScrollGSAP = ({
             alt={content[activeCard].title}
             width={600}
             height={500}
-            className="w-full h-full object-contain rounded-md"
+            className="w-full h-full object-fill rounded-md "
           />
         )}
       </div>

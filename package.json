@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/groq": "^2.0.24",
+    "@google/genai": "^1.25.0",
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
     "@lottiefiles/dotlottie-react": "^0.15.2",
@@ -20,6 +22,7 @@
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",
     "@vercel/analytics": "^1.5.0",
+    "ai": "^5.0.76",
     "axios": "^1.12.2",
     "class-variance-authority": "^0.7.1",
     "cloudinary": "^2.7.0",
