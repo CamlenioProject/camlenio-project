@@ -17,10 +17,10 @@ import { MobileDropdown } from "./MobileDropdown";
 const availablePages = [
   // "/portfolio",
   "/component/services/customizedsoftware",
-  "/component/services/crmsoftware",
+  // "/component/services/crmsoftware",
   "/component/services/ecommerceportel",
   "/component/services/fintechsoftware",
-  "/component/services/fullstackdevelopment",
+  // "/component/services/fullstackdevelopment",
   "/component/services/billingsoftware",
   "/component/services/hrmssoftware",
   // "/component/services/androidappdevelopment",

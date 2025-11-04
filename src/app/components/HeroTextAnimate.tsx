@@ -10,8 +10,8 @@ export interface HeroTextAnimateProps {
   className?: string;
   textClassName?: string;
   animationDuration?: number;
-  paddingLeft?: string; // e.g., "1rem"
-  paddingRight?: string; // e.g., "1rem"
+  paddingLeft?: string;
+  paddingRight?: string;
 }
 
 export function HeroTextAnimate({

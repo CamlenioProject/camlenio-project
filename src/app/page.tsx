@@ -44,7 +44,3 @@ const Home = () => {
   );
 };
 export default Home;
-
-// export default function Page() {
-//   throw new Error("Intentional server error for testing!");
-// }

@@ -138,7 +138,7 @@ export default function Hero() {
             solutions.
           </p>
           <div
-            className="rounded-2xl border border-orange-300 bg-orange-200 shadow-sm p-4 md:p-5"
+            className="rounded-2xl border border-orange-300 bg-[#FEF3E6] shadow-sm p-4 md:p-5"
             role="group"
             aria-label="Quick trip planner"
           >

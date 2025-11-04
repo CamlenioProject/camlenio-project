@@ -1,0 +1,16 @@
+<section className="relative py-12 overflow-hidden bg-gradient-to-r from-orange-100 to-indigo-100">
+        <div
+          ref={marqueeRef}
+          className="flex whitespace-nowrap text-6xl font-extrabold text-gray-900/10"
+        >
+          {Array(8)
+            .fill("INNOVATION • SCALABILITY • PERFORMANCE • DESIGN • ")
+            .map((text, i) => (
+              <span key={i}>{text}</span>
+            ))}
+        </div>
+      </section>
+
+      textShadow:
+  "-1px -1px 0px #ea580c, 2px 2px 4px #fb923c, 4px 4px 8px rgba(234, 88, 12, 0.5)",
+bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent

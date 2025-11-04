@@ -21,14 +21,20 @@ export default function LenisWrapper({ children }: Props) {
 
     lenis.on("scroll", ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
+    const ticker = (time: number) => {
       lenis.raf(time * 1000);
-    });
+    };
+
+    gsap.ticker.add(ticker);
 
     gsap.ticker.lagSmoothing(0);
     window.scrollTo(0, 0);
 
-    return () => lenis.destroy();
+    return () => {
+      // Clean up both the Lenis instance and the GSAP ticker
+      gsap.ticker.remove(ticker);
+      lenis.destroy();
+    };
   }, [pathname]);
 
   return <>{children}</>;
